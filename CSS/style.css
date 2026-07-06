@@ -1,0 +1,15 @@
+body{
+    background-color: lightblue;
+}
+#contato{
+    background-color: yellowgreen; /*cor de fundo da caixa*/
+    padding: 20px; /*padding cria espaçamento do conteúdo dentro da caixa para a borda dela*/
+    margin-top: 20px; /*margin cria espaçamento fora da caixa "entre caixas"*/
+}
+.card-projeto{
+    background-color: aliceblue;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 2px solid gray; /*1px = espeçura da borda; solid = tipo do tracejado da linha; gray = cor da borda*/
+    width: 40%;
+}
