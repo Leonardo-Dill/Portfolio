@@ -1,6 +1,6 @@
-# projeto de portifólio - Leonardo Dill
+# projeto de portfólio - Leonardo Dill
 
-esse é meu projeto pessoal, sintam-se livres para explorar, se tiver alguma dica ou sugestão, meus contatos estão na página de portifólio
+esse é meu projeto pessoal, sintam-se livres para explorar, se tiver alguma dica ou sugestão, meus contatos estão na página de portfólio
 
 ## Tecnologias utilizadas até aqui
 
