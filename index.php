@@ -21,13 +21,15 @@ $projetos = [
 <html>  <!--abre a tag HTML, tudo aqui dentro é HTML.--> 
     <head> <!--cabeçalho e informações adicionais utilizadas pelo navegador-->
         <meta charset="UTF-8"> <!-- define o alfabeto utilizado na página (conjunto de caracteres e emojis)--> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- define a largura da página para se ajustar à largura do dispositivo, e a escala inicial da página para 1.0 (sem zoom)-->
         <title>Portfólio L.D.</title> <!-- título que aparece na guia do navegador--> 
         <link rel="stylesheet" href="css/style.css">
     </head>
 
     <body> <!-- conteúdo visível da página--> 
         <header> <!-- título principal da página--> 
-            <h1>Leonardo Dill</h1>  <!--H1 identifica a hierarquida e tamanho do título--> 
+            <button id="botao-tema" onclick="alternarTema()">🌙 Modo escuro</button> <!--botão para alternar entre o modo claro e escuro-->
+            <h1>Leonardo Dill</h1>  <!--H1 identifica a hierarquida e tamanho do título-->           
         </header>
         <section id="sobre">         <!--Primeira secçao da página, falando um pouco sobre mim, contando com título de hierarquia 2 (<h2>) e conteúdo (<p>)-->
             <h2>Sobre mim</h2>
@@ -61,6 +63,17 @@ $projetos = [
         <footer>
             <p>&copy; <?php echo date("Y"); ?> <a href="https://github.com/Leonardo-Dill">Leonardo Dill</a> Todos os direitos reservados. </p>
         </footer>
+        <script>
+function alternarTema() {
+    document.body.classList.toggle('tema-escuro');
+    const escuro = document.body.classList.contains('tema-escuro');
+    localStorage.setItem('tema', escuro ? 'escuro' : 'claro');
+}
+
+if (localStorage.getItem('tema') === 'escuro') {
+    document.body.classList.add('tema-escuro');
+}
+</script>
     </body>
     <?php
 if (isset($_GET["sucesso"])) {  //verifica se a variável "sucesso" foi definida na URL através do método GET, se sim, exibe a mensagem de sucesso.

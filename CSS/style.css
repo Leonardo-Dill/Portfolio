@@ -1,15 +1,129 @@
-body{
-    background-color: lightblue;
+* {
+    box-sizing: border-box;
 }
-#contato{
-    background-color: yellowgreen; /*cor de fundo da caixa*/
-    padding: 20px; /*padding cria espaçamento do conteúdo dentro da caixa para a borda dela*/
-    margin-top: 20px; /*margin cria espaçamento fora da caixa "entre caixas"*/
+:root {
+    --cor-fundo: #ffffff;
+    --cor-fundo-secao: #fafafa;
+    --cor-texto: #1a1a1a;
+    --cor-texto-secundario: #555555;
+    --cor-borda: #e0e0e0;
+    --cor-card: #f0f8ff;
+    --cor-link: #1a5fb4;
 }
-.card-projeto{
-    background-color: aliceblue;
+
+body.tema-escuro {
+    --cor-fundo: #12131a;
+    --cor-fundo-secao: #181923;
+    --cor-texto: #eaeaf0;
+    --cor-texto-secundario: #9a9aab;
+    --cor-borda: #2a2c38;
+    --cor-card: #1e2029;
+    --cor-link: #7fb0f0;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+#contato {
+    background-color: var(--cor-fundo-secao);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card-projeto {
+    background-color: var(--cor-card);
     padding: 15px;
     margin-bottom: 15px;
-    border: 2px solid gray; /*1px = espeçura da borda; solid = tipo do tracejado da linha; gray = cor da borda*/
-    width: 40%;
+    border: 2px solid var(--cor-borda);
+    border-radius: 10px;
+    flex: 1 1 280px;
+}
+
+#botao-tema {
+    padding: 8px 16px;
+    cursor: pointer;
+    border: 1px solid var(--cor-borda);
+    background-color: var(--cor-fundo-secao);
+    color: var(--cor-texto);
+    border-radius: 6px;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section, header, footer {
+    padding: 20px 0;
+}
+@media (max-width: 700px) {
+    .card-projeto {
+        width: 100%;
+    }
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin-top: 16px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+form label {
+    font-size: 14px;
+    color: var(--cor-texto-secundario);
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 6px;
+    background-color: var(--cor-fundo-secao);
+    color: var(--cor-texto);
+    font-family: inherit;
+    font-size: 14px;
+}
+
+form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+form button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--cor-texto);
+    color: var(--cor-fundo);
+    font-size: 14px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+form button:hover {
+    opacity: 0.85;
+}
+a {
+    color: var(--cor-link);
+}
+#projetos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+#projetos h2 {
+    width: 100%;
 }
